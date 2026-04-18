@@ -1,0 +1,28 @@
+{
+  "name": "HwBOS",
+  "version": "1.0.0",
+  "main": "index.html",
+  "window": {
+    "title": "HwBOS - 智能桌面系统",
+    "width": 1280,
+    "height": 720,
+    "resizable": true,
+    "fullscreen": true,
+    "frame": false,
+    "show": true,
+    "webPreferences": {
+      "nodeIntegration": true,
+      "contextIsolation": false,
+      "preload": "./preload.js",  // 新增预加载脚本
+      "allowRunningInsecureContent": true,
+      "webSecurity": false
+    }
+  },
+  "nodejs": true,
+  "webkit": {
+    "plugin": true,
+    "java": false,
+    "page-cache": false
+  },
+  "chromium-args": "--no-sandbox --disable-gpu --disable-software-rasterizer --allow-file-access-from-files --disable-web-security --disable-features=RendererCodeIntegrity --enable-local-file-accesses"
+}
